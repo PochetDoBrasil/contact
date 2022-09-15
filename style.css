@@ -1,0 +1,233 @@
+* {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+	font-family: 'Roboto', sans-serif;
+	height: 100vh;
+	min-height: 100vh;
+	scroll-behavior: smooth;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #bec3f9 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(244, 19, 69, 0.6);
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+
+body {
+	background-color: #d7113c;
+}
+
+.loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+
+.loading-content {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 50%;
+}
+
+.loading-content span {
+	position: relative;
+	top: 2vh;
+	text-align: center;
+	width: 100%;
+}
+
+.flipping {
+   width: 9rem;
+   height: 9rem;
+   animation: flipping-apv10omd 2s infinite linear;
+}
+
+.flipping::before {
+   content: "";
+   display: block;
+   width: 50%;
+   height: 50%;
+   transform: perspective(168px) rotateX(0deg);
+   transform-origin: bottom;
+   animation: flipping-1vy4p0md 0.5s infinite linear alternate,
+          flipping-mr9hp6md 0.5s infinite linear alternate;
+}
+
+@keyframes flipping-apv10omd {
+   0%, 24.99% {
+      transform: scale(1 , 1) rotate(0deg);
+   }
+
+   25%, 49.99% {
+      transform: scale(1 ,-1) rotate(90deg);
+   }
+
+   50%, 74.99% {
+      transform: scale(-1,-1) rotate(0deg);
+   }
+
+   75%, 100% {
+      transform: scale(-1, 1) rotate(90deg);
+   }
+}
+
+@keyframes flipping-1vy4p0md {
+   100% {
+      transform: perspective(168px) rotateX(180deg);
+   }
+}
+
+@keyframes flipping-mr9hp6md {
+   0%, 49.9% {
+      background: #f41345;
+   }
+
+   50%, 100% {
+      background: #818383;
+   }
+}
+
+.flipping span {
+	position: relative;
+	top: 10%;
+}
+
+.contact {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+}
+
+.contact-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url('img-1.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	width: 100%;
+	height: 30rem;
+	background-color: #d7113c;
+	border-bottom: 1rem solid #f41345;
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.logo {
+	height: 15rem;
+	border-radius: 1rem 1rem 1rem 1rem;
+}
+
+.contact-content {
+	width: 100%;
+	padding-bottom: 2rem;
+	background-image: linear-gradient(to top, rgba(255, 255, 255, 0.9), #fff);
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.contact-information-static {
+	width: 98%;
+	padding-top: 3rem;
+	padding-left: 2%;
+}
+
+.contact-information-static * {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.contact-information-static h1 {
+	text-align: center;
+	font-size: 3rem;
+	color: #d7113c;
+}
+
+.contact-information-static h2 {
+	text-align: center;
+	font-size: 2.7rem;
+	color: #797b7b;
+}
+
+.contact-information {
+	width: 98%;
+	padding-top: 3rem;
+	padding-left: 2%;	
+}
+
+.contact-information a {
+	text-decoration: none;
+}
+
+.contact-information h3 {
+	width: 85%;
+	font-size: 1.5rem;
+	word-wrap: break-word;
+	color: rgba(0, 0, 0, 0.8);
+	transition: 0.3s;
+	font-weight: normal !important;
+	padding-bottom: 0.4rem;
+	border-bottom: 1px solid rgba(244, 19, 69, 0.2);
+}
+
+.contact-information h3:hover {
+	border-radius: 0 0.5rem 0.5rem 0;
+	background-color: rgba(244, 19, 69, 0.2);
+	padding: 0.4rem;
+	border-left: 0.5rem solid #f41345;
+	border-bottom: none;
+}
+
+.contact-information h3 i {
+	font-size: 2rem !important;
+	padding-right: 0.2rem;
+	color: #f41345 !important;
+}
+
+@media screen and (max-width: 768px) {
+	.contact-information-static h1 {
+		font-size: 2.5rem;
+	}
+
+	.contact-information-static h2 {
+		font-size: 2.3rem;
+	}
+
+	.contact-information a {
+		text-decoration: none;
+	}
+
+	.contact-information h3 {
+		font-size: 1.2rem;
+	}
+}
